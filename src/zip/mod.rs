@@ -511,6 +511,14 @@ offset_impl! {
     [A B C D E F G H I J][ a b c d e f g h i j],
     [A B C D E F G H I J K][ a b c d e f g h i j k],
     [A B C D E F G H I J K L][ a b c d e f g h i j k l],
+    [A B C D E F G H I J K L M][ a b c d e f g h i j k l m],
+    [A B C D E F G H I J K L M N][ a b c d e f g h i j k l m n],
+    [A B C D E F G H I J K L M N O][ a b c d e f g h i j k l m n o],
+    [A B C D E F G H I J K L M N O P][ a b c d e f g h i j k l m n o p],
+    [A B C D E F G H I J K L M N O P Q][ a b c d e f g h i j k l m n o p q],
+    [A B C D E F G H I J K L M N O P Q R][ a b c d e f g h i j k l m n o p q r],
+    [A B C D E F G H I J K L M N O P Q R S][ a b c d e f g h i j k l m n o p q r s],
+    [A B C D E F G H I J K L M N O P Q R S T][ a b c d e f g h i j k l m n o p q r s t],
 }
 
 macro_rules! zipt_impl {
@@ -576,6 +584,14 @@ zipt_impl! {
     [A B C D E F G H I J][ a b c d e f g h i j],
     [A B C D E F G H I J K][ a b c d e f g h i j k],
     [A B C D E F G H I J K L][ a b c d e f g h i j k l],
+    [A B C D E F G H I J K L M][ a b c d e f g h i j k l m],
+    [A B C D E F G H I J K L M N][ a b c d e f g h i j k l m n],
+    [A B C D E F G H I J K L M N O][ a b c d e f g h i j k l m n o],
+    [A B C D E F G H I J K L M N O P][ a b c d e f g h i j k l m n o p],
+    [A B C D E F G H I J K L M N O P Q][ a b c d e f g h i j k l m n o p q],
+    [A B C D E F G H I J K L M N O P Q R][ a b c d e f g h i j k l m n o p q r],
+    [A B C D E F G H I J K L M N O P Q R S][ a b c d e f g h i j k l m n o p q r s],
+    [A B C D E F G H I J K L M N O P Q R S T][ a b c d e f g h i j k l m n o p q r s t],
 }
 
 macro_rules! map_impl {
@@ -933,7 +949,15 @@ map_impl! {
     [true P1 P2 P3 P4 P5 P6 P7 P8 P9],
     [true P1 P2 P3 P4 P5 P6 P7 P8 P9 P10],
     [true P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11],
-    [false P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12],
+    [true P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12],
+    [true P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12 P13],
+    [true P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12 P13 P14],
+    [true P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12 P13 P14 P15],
+    [true P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12 P13 P14 P15 P16],
+    [true P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12 P13 P14 P15 P16 P17],
+    [true P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12 P13 P14 P15 P16 P17 P18],
+    [true P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12 P13 P14 P15 P16 P17 P18 P19],
+    [false P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12 P13 P14 P15 P16 P17 P18 P19 P20],
 }
 
 /// Value controlling the execution of `.fold_while` on `Zip`.
