@@ -13,6 +13,7 @@ mod into_iter;
 pub mod iter;
 mod lanes;
 mod windows;
+mod windows_mut;
 
 #[cfg(not(feature = "std"))]
 use alloc::vec::Vec;
@@ -33,6 +34,7 @@ pub use self::chunks::{ExactChunks, ExactChunksIter, ExactChunksIterMut, ExactCh
 pub use self::into_iter::IntoIter;
 pub use self::lanes::{Lanes, LanesMut};
 pub use self::windows::{AxisWindows, Windows};
+pub use self::windows_mut::WindowsMut;
 
 use std::slice::{self, Iter as SliceIter, IterMut as SliceIterMut};
 

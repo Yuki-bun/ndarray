@@ -33,6 +33,7 @@ use crate::dimension::{
     Axes,
 };
 use crate::error::{self, from_kind, ErrorKind, ShapeError};
+use crate::iterators::WindowsMut;
 use crate::itertools::zip;
 use crate::math_cell::MathCell;
 use crate::order::Order;
@@ -1445,6 +1446,14 @@ impl<A, D: Dimension> ArrayRef<A, D>
     where E: IntoDimension<Dim = D>
     {
         Windows::new(self.view(), window_size)
+    }
+
+    /// TODO: docs
+    #[track_caller]
+    pub fn windows_mut<E>(&mut self, window_size: E, stride: E) -> WindowsMut<'_, A, D>
+    where E: IntoDimension<Dim = D>
+    {
+        WindowsMut::new(self.view_mut(), window_size, stride)
     }
 
     /// Return a window producer and iterable.
